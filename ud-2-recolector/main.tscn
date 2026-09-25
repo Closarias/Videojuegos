@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ba64qh4yfi7b1"]
+
+[node name="Node2D" type="Node2D" unique_id=688323428]
+
+[node name="Label" type="Label" parent="." unique_id=693540650]
+offset_right = 176.0
+offset_bottom = 34.0
+text = "Hola, Godot 4.7 Unax"
