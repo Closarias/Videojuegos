@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://ba64qh4yfi7b1"]
 
+[ext_resource type="Texture2D" uid="uid://bkwg873j1qrp6" path="res://player/player.png" id="1_ig7tw"]
+
 [node name="Node2D" type="Node2D" unique_id=688323428]
 
-[node name="Label" type="Label" parent="." unique_id=693540650]
-offset_right = 176.0
-offset_bottom = 34.0
-text = "Hola, Godot 4.7 Unax"
+[node name="Player" type="Sprite2D" parent="." unique_id=522919752]
+position = Vector2(25, 81)
+scale = Vector2(8, 8)
+texture = ExtResource("1_ig7tw")

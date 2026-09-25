@@ -1,0 +1,17 @@
+Recursos de la UD2 · Programación de videojuegos CMO-318 · 26/27
+
+Todas las imágenes y los sonidos están hechos para este módulo y se pueden
+usar, modificar y redistribuir sin restricciones (dominio público, CC0).
+
+La fuente Pixelify Sans está bajo la SIL Open Font License 1.1
+(archivo fonts/PixelifySans-OFL.txt). Esa licencia tiene que acompañar
+siempre a la fuente si la distribuyes con tu juego.
+
+player/    player.png             personaje, 16 x 16
+pickups/   coin.png               4 fotogramas de 16 x 16 (tira de 64 x 16)
+level/     tiles.png              8 tiles de 16 x 16 (4 x 2)
+           light.png              textura para PointLight2D
+audio/     pickup.wav             efecto, sin bucle
+           music.ogg              bucle de 4 segundos
+fonts/     PixelifySans-Medium.ttf y su licencia
+3d/        crate.png, floor.png   texturas de 64 x 64 para la sesión 9
