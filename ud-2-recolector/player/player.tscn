@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://pr3ono5jrdv2"]
+
+[ext_resource type="Script" uid="uid://dwfjv3fdc31c5" path="res://player/player.gd" id="1_rkbax"]
+[ext_resource type="Texture2D" uid="uid://bkwg873j1qrp6" path="res://player/player.png" id="2_g1dw6"]
+[ext_resource type="Texture2D" uid="uid://8503xl4qdpc4" path="res://3d/crate.png" id="3_g1dw6"]
+[ext_resource type="Texture2D" uid="uid://c5ybqfoybfvxk" path="res://pickups/coin.png" id="4_qjkh3"]
+[ext_resource type="AudioStream" uid="uid://gre2pd7lu224" path="res://audio/pickup.wav" id="5_g6k8r"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jq1mw"]
+radius = 5.0
+height = 14.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_boad6"]
+radius = 6.0
+
+[node name="Player" type="Node2D" unique_id=1538465350]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1216419961]
+motion_mode = 1
+script = ExtResource("1_rkbax")
+speed = 150.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=256109996]
+texture = ExtResource("2_g1dw6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1772365944]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_jq1mw")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=744035305]
+zoom = Vector2(3, 3)
+
+[node name="Crate" type="Sprite2D" parent="." unique_id=974942594]
+position = Vector2(52, -2)
+texture = ExtResource("3_g1dw6")
+
+[node name="Coin" type="Area2D" parent="." unique_id=1096839931]
+position = Vector2(-77, -10)
+
+[node name="Sprite2D" type="Sprite2D" parent="Coin" unique_id=567760095]
+texture = ExtResource("4_qjkh3")
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin" unique_id=1197426655]
+shape = SubResource("CircleShape2D_boad6")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="Coin" unique_id=935036210]
+stream = ExtResource("5_g6k8r")
+
+[node name="Coin2" type="Area2D" parent="." unique_id=303127565]
+position = Vector2(-61, -49)
+
+[node name="Sprite2D" type="Sprite2D" parent="Coin2" unique_id=1561285733]
+texture = ExtResource("4_qjkh3")
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin2" unique_id=97618683]
+shape = SubResource("CircleShape2D_boad6")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="Coin2" unique_id=248478672]
+stream = ExtResource("5_g6k8r")
