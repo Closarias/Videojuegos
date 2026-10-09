@@ -6,17 +6,14 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_jq1mw"]
 radius = 6.0
 
-[node name="Coin" type="Node2D" unique_id=1999223630]
-position = Vector2(207, 105)
+[node name="Coin" type="Area2D" unique_id=2043442795]
 
-[node name="Coin" type="Area2D" parent="." unique_id=587290975]
-
-[node name="Sprite2D" type="Sprite2D" parent="Coin" unique_id=1108396318]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=864624956]
 texture = ExtResource("1_72qll")
 hframes = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin" unique_id=560632628]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=615655756]
 shape = SubResource("CircleShape2D_jq1mw")
 
-[node name="Sound" type="AudioStreamPlayer2D" parent="Coin" unique_id=788284328]
+[node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=886544708]
 stream = ExtResource("2_mbylt")
