@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://unilqey2f4r"]
 
+[ext_resource type="Script" uid="uid://0gnvnnpxl6o7" path="res://pickups/coin.gd" id="1_4qu25"]
 [ext_resource type="Texture2D" uid="uid://c5ybqfoybfvxk" path="res://pickups/coin.png" id="1_72qll"]
 [ext_resource type="AudioStream" uid="uid://gre2pd7lu224" path="res://audio/pickup.wav" id="2_mbylt"]
 
@@ -7,6 +8,9 @@
 radius = 6.0
 
 [node name="Coin" type="Area2D" unique_id=2043442795]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_4qu25")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=864624956]
 texture = ExtResource("1_72qll")
