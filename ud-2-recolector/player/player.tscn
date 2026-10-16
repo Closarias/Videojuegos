@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dwfjv3fdc31c5" path="res://player/player.gd" id="1_rkbax"]
 [ext_resource type="Texture2D" uid="uid://bkwg873j1qrp6" path="res://player/player.png" id="2_g1dw6"]
+[ext_resource type="Texture2D" uid="uid://5ib4pr66jwux" path="res://level/light.png" id="3_g1dw6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jq1mw"]
 radius = 5.0
@@ -22,3 +23,8 @@ shape = SubResource("CapsuleShape2D_jq1mw")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1257588837]
 zoom = Vector2(3, 3)
+
+[node name="Flashlight" type="PointLight2D" parent="." unique_id=556402789]
+shadow_enabled = true
+texture = ExtResource("3_g1dw6")
+texture_scale = 2.0
