@@ -61,7 +61,7 @@ position = Vector2(90, -44)
 position = Vector2(-54, -5)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=260981717]
-color = Color(0.19793716, 0.19793728, 0.19793719, 1)
+color = Color(0.06469653, 0.06469653, 0.06469653, 1)
 
 [connection signal="body_entered" from="Coins/Coin" to="Coins/Coin" method="_on_body_entered"]
 [connection signal="body_entered" from="Coins/Coin2" to="Coins/Coin2" method="_on_body_entered"]

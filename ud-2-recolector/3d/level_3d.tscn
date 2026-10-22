@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dmmiqna2nostw"]
+
+[ext_resource type="Texture2D" uid="uid://b2sffxc8r1e6v" path="res://3d/floor.png" id="1_77q10"]
+[ext_resource type="Texture2D" uid="uid://8503xl4qdpc4" path="res://3d/crate.png" id="2_bmdi5"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jq1mw"]
+size = Vector2(10, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77q10"]
+albedo_texture = ExtResource("1_77q10")
+uv2_scale = Vector3(5, 5, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hverb"]
+albedo_texture = ExtResource("2_bmdi5")
+
+[sub_resource type="BoxMesh" id="BoxMesh_jq1mw"]
+material = SubResource("StandardMaterial3D_hverb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r0f78"]
+albedo_texture = ExtResource("2_bmdi5")
+uv1_scale = Vector3(3, 2, 1)
+
+[node name="Level3d" type="Node3D" unique_id=187444262]
+
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=1049474927]
+mesh = SubResource("PlaneMesh_jq1mw")
+surface_material_override/0 = SubResource("StandardMaterial3D_77q10")
+
+[node name="Crate" type="MeshInstance3D" parent="." unique_id=1207568579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_jq1mw")
+surface_material_override/0 = SubResource("StandardMaterial3D_r0f78")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=684521281]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3738842, 3.5427237)

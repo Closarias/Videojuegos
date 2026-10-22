@@ -27,4 +27,4 @@ zoom = Vector2(3, 3)
 [node name="Flashlight" type="PointLight2D" parent="." unique_id=556402789]
 shadow_enabled = true
 texture = ExtResource("3_g1dw6")
-texture_scale = 2.0
+texture_scale = 0.75

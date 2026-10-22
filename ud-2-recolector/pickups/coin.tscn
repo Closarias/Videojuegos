@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://0gnvnnpxl6o7" path="res://pickups/coin.gd" id="1_4qu25"]
 [ext_resource type="Texture2D" uid="uid://c5ybqfoybfvxk" path="res://pickups/coin.png" id="1_72qll"]
 [ext_resource type="AudioStream" uid="uid://gre2pd7lu224" path="res://audio/pickup.wav" id="2_mbylt"]
+[ext_resource type="Texture2D" uid="uid://5ib4pr66jwux" path="res://level/light.png" id="4_2w8ax"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jq1mw"]
 radius = 6.0
@@ -21,3 +22,8 @@ shape = SubResource("CircleShape2D_jq1mw")
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=886544708]
 stream = ExtResource("2_mbylt")
+
+[node name="Glow" type="PointLight2D" parent="." unique_id=1512856795]
+shadow_enabled = true
+texture = ExtResource("4_2w8ax")
+texture_scale = 0.25
