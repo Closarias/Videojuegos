@@ -8,7 +8,7 @@ size = Vector2(10, 10)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77q10"]
 albedo_texture = ExtResource("1_77q10")
-uv2_scale = Vector3(5, 5, 5)
+uv1_scale = Vector3(5, 5, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hverb"]
 albedo_texture = ExtResource("2_bmdi5")
@@ -20,6 +20,21 @@ material = SubResource("StandardMaterial3D_hverb")
 albedo_texture = ExtResource("2_bmdi5")
 uv1_scale = Vector3(3, 2, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcmy5"]
+albedo_color = Color(1, 0.6745098, 0, 1)
+metallic = 1.0
+roughness = 0.25
+
+[sub_resource type="SphereMesh" id="SphereMesh_jq1mw"]
+material = SubResource("StandardMaterial3D_tcmy5")
+
+[sub_resource type="Environment" id="Environment_jq1mw"]
+background_mode = 1
+background_color = Color(0.6745098, 0.91764706, 0.9882353, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.2901961, 0.7882353, 1, 1)
+ambient_light_energy = 0.5
+
 [node name="Level3d" type="Node3D" unique_id=187444262]
 
 [node name="Ground" type="MeshInstance3D" parent="." unique_id=1049474927]
@@ -27,9 +42,31 @@ mesh = SubResource("PlaneMesh_jq1mw")
 surface_material_override/0 = SubResource("StandardMaterial3D_77q10")
 
 [node name="Crate" type="MeshInstance3D" parent="." unique_id=1207568579]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.5, 0)
 mesh = SubResource("BoxMesh_jq1mw")
 surface_material_override/0 = SubResource("StandardMaterial3D_r0f78")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1253596924]
+transform = Transform3D(-0.9097495, 0.014928644, 0.4148892, 0.016407412, 0.9998654, 0, -0.41483334, 0.0068072574, -0.90987194, 1.5, 0.5, 0)
+mesh = SubResource("SphereMesh_jq1mw")
+
 [node name="Camera3D" type="Camera3D" parent="." unique_id=684521281]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3738842, 3.5427237)
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 5, 8)
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=683323634]
+transform = Transform3D(0.8660254, 0.38302222, -0.32139382, 0, 0.64278764, 0.76604444, 0.5, -0.66341394, 0.5566704, 0, 4, 0)
+shadow_enabled = true
+
+[node name="Lamp" type="OmniLight3D" parent="." unique_id=196244570]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 1)
+light_color = Color(1, 0.47843137, 0, 1)
+light_energy = 2.0
+
+[node name="Spot" type="SpotLight3D" parent="." unique_id=1836891941]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.5, 4, 0)
+light_energy = 3.0
+spot_range = 8.0
+spot_angle = 30.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1759934129]
+environment = SubResource("Environment_jq1mw")
