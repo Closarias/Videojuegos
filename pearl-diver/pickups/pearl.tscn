@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://ww8atnnmexcw"]
+
+[ext_resource type="Texture2D" uid="uid://c437c2bqy33wo" path="res://pickups/pearl.png" id="1_pjx3s"]
+[ext_resource type="Script" uid="uid://bqfs8r00tyfup" path="res://pickups/pearl.gd" id="1_viq14"]
+[ext_resource type="AudioStream" uid="uid://b4ybkg75tsuf5" path="res://audio/pickup.wav" id="2_viq14"]
+[ext_resource type="Texture2D" uid="uid://bpdmp7rrl7bix" path="res://level/light.png" id="4_b17sp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jq1mw"]
+radius = 6.0
+
+[node name="Pearl" type="Area2D" unique_id=1462402197 groups=["pearls"]]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_viq14")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1433486968]
+texture = ExtResource("1_pjx3s")
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=480078738]
+shape = SubResource("CircleShape2D_jq1mw")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=1281811174]
+stream = ExtResource("2_viq14")
+volume_db = -12.0
+
+[node name="Glow" type="PointLight2D" parent="." unique_id=1043838262]
+color = Color(0.6627451, 0.9098039, 1, 1)
+energy = 0.8
+texture = ExtResource("4_b17sp")
+texture_scale = 0.4
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

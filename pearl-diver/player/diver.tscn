@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://chg36326ygahh"]
+
+[ext_resource type="Script" uid="uid://cdmc0vrtdim1n" path="res://player/diver.gd" id="1_nxmk3"]
+[ext_resource type="Texture2D" uid="uid://b78j0ppritdtn" path="res://player/diver.png" id="2_vko86"]
+[ext_resource type="Texture2D" uid="uid://bpdmp7rrl7bix" path="res://level/light.png" id="3_vko86"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jq1mw"]
+radius = 5.0
+height = 14.0
+
+[node name="Diver" type="CharacterBody2D" unique_id=989529712 groups=["player"]]
+collision_layer = 2
+script = ExtResource("1_nxmk3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1648458052]
+texture = ExtResource("2_vko86")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=461057333]
+shape = SubResource("CapsuleShape2D_jq1mw")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1898831817]
+zoom = Vector2(3, 3)
+
+[node name="Flashlight" type="PointLight2D" parent="." unique_id=429694775]
+color = Color(0.72156864, 0.90588236, 1, 1)
+shadow_enabled = true
+texture = ExtResource("3_vko86")
+texture_scale = 1.5
