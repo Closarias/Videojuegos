@@ -30,9 +30,9 @@ material = SubResource("StandardMaterial3D_tcmy5")
 
 [sub_resource type="Environment" id="Environment_jq1mw"]
 background_mode = 1
-background_color = Color(0.6745098, 0.91764706, 0.9882353, 1)
+background_color = Color(0.009259273, 0.1111471, 0.13769722, 1)
 ambient_light_source = 2
-ambient_light_color = Color(0.2901961, 0.7882353, 1, 1)
+ambient_light_color = Color(3.970787e-07, 0.1882877, 0.26055694, 1)
 ambient_light_energy = 0.5
 
 [node name="Level3d" type="Node3D" unique_id=187444262]
